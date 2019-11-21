@@ -1,0 +1,63 @@
+body {
+  background: url('../img/bg2.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;   
+}
+.bg-dark {
+  background-color: #121212!important;
+}
+.title {
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  color: #FFD700;
+
+}
+.subtitle {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+  font-size: 14px;
+  transform: rotate(-15deg);
+  font-family: 'Rock Salt', cursive;
+}
+.burgers {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Rock Salt', cursive;
+  color: aliceblue;
+}
+.card-left {
+  background: #121212 url('../img/bg.jpg') top left;
+  background-repeat: no-repeat;
+  background-size: cover;  
+
+}
+.card-right {
+  background: #121212 url('../img/bg.jpg') top right;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  font-family: 'Neucha', cursive;
+  
+}
+.btn {
+  font-family: 'Neucha', cursive;
+}
+.eat {
+  border-left: 1px solid aliceblue;
+  padding-left: 10px;
+  font-size: small;
+  cursor: pointer;
+}
+.gone {
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  font-size: 14px;
+  transform: rotate(-15deg);
+  font-family: 'Rock Salt', cursive;
+  color: red;
+  background: aliceblue;
+  padding: 5px;
+}
+
