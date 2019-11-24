@@ -11,7 +11,9 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     } 
-  }
-  );
+  });
+  Burger.associate = function (models) {
+    models.Burger.belongsTo(models.Customer);
+};
   return Burger;
 };

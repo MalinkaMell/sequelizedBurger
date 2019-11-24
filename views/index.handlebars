@@ -7,8 +7,15 @@
             {{#each burger}}
             {{#unless devoured}}
             <li class="list-group-item bg-transparent">
-              <div class="d-flex w-100 justify-content-between burgers">
-                {{ burger_name }} <span class="float-right"> {{> burger/button}}</span>
+              <div class="row">
+                <div class="col-5">
+                  <div class="burgers">
+                    {{ burger_name }}
+                  </div>
+                </div>
+                <div class="col-7">
+                  {{> burger/button}}
+                </div>
               </div>
             </li>
             {{/unless}}
@@ -19,7 +26,7 @@
       <div class="card bg-dark text-white text-center card-middle">
         <div class="card-header position-relative">
           <h1 class="card-title title">Eat-Da-Burger!</h1>
-         <span class="subtitle">Sequelized</span>
+          <span class="subtitle">Sequelized</span>
         </div>
         <img src="assets/img/burger-1.jpg" class="card-img" alt="Yummy Burgers!">
         <div class="card-body">
@@ -31,8 +38,8 @@
                 <span class="input-group-text bg-dark text-warning border-warning"><i
                     class="fas fa-hamburger"></i></span>
               </div>
-              <input list="burgers" type="text" class="form-control" name="burger_name" id="burger_name"
-                placeholder="Insert Name">
+              <input list="burgers" type="text" class="form-control bg-dark text-warning border-warning"
+                name="burger_name" id="burger_name" placeholder="Insert Name">
               <datalist id="burgers">
                 <option value="Western Bacon Cheeseburger">
                 <option value="Beyond BBQ Cheeseburger">
@@ -53,8 +60,8 @@
           <ul class="list-group">
             {{#each burger}}
             {{#if devoured}}
-            <li class="list-group-item  bg-transparent text-left burgers position-relative">
-              {{ burger_name }} <span class="gone">GONE!</span>
+            <li class="list-group-item  bg-transparent text-left burgers position-relative eaten">
+              {{ burger_name }} <span class="gone">{{ Customer.name}}</span>
             </li>
             {{/if}}
             {{/each}}

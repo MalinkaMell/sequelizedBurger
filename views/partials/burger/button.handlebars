@@ -1,3 +1,9 @@
-<a class="eat link" data-id="{{id}}" data-devoured="{{devoured}}">
-	DEVOUR!
-</a>
+<div class="input-group mb-3 mr-auto burgers">
+	<input type="text" class="form-control bg-dark text-warning border-warning" name="customer-name" id="customer-name"
+		placeholder="Name">
+	<div class="input-group-append ">
+		<a class="eat input-group-text bg-dark text-warning border-warning link" data-id="{{id}}"
+			data-devoured="{{devoured}}">Devour!</a>
+	</div>
+	<div class="invalid-feedback" id="invalid-message"></div>
+</div>

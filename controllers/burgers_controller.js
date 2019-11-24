@@ -6,16 +6,18 @@ const debug = require('debug')('app');
 module.exports = function (app) {
     app.get('/', function (req, res) {
         db.Burger
-            .findAll({})
+            .findAll({
+                 include: [db.Customer] 
+            })
             .then(function (results) {
-                console.log(results);
+console.log(results);
 
                 res.render('index', { burger: results });
             })
     });
     app.get('/api/burgers', function (req, res) {
         db.Burger
-            .findAll({})
+            .findAll({ include: [db.Customer] })
             .then(function (results) {
                 res.json(results);
             })
@@ -29,14 +31,21 @@ module.exports = function (app) {
 
     });
     app.put("/api/burgers/:id", function (req, res) {
-        console.log(req.params.id)
-        db.Burger
-            .update(
-                req.body,
-                { where: { id: req.params.id } })
-            .then(function (results) {
-                res.json(results);
+        db.Customer
+            .create(
+                { name: req.body.name }
+            )
+            .then(function (customers) {
+                res.json(customers);
+                db.Burger
+                    .update(
+                        { devoured: req.body.devoured, CustomerId: customers.id },
+                        { where: { id: req.params.id } })
+                    .then(function (results) {
+                        res.json(results);
+                    });
             });
+
 
     });
 
