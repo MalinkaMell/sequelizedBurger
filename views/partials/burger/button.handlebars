@@ -1,9 +1,9 @@
 <div class="input-group mb-3 mr-auto burgers">
-	<input type="text" class="form-control bg-dark text-warning border-warning" name="customer-name" id="customer-name"
+	<input type="text" class="form-control bg-dark text-warning border-warning customer-name" name="customer-name" id="{{id}}"
 		placeholder="Name">
 	<div class="input-group-append ">
 		<a class="eat input-group-text bg-dark text-warning border-warning link" data-id="{{id}}"
 			data-devoured="{{devoured}}">Devour!</a>
 	</div>
-	<div class="invalid-feedback" id="invalid-message"></div>
+	<div class="invalid-feedback" id="invalid-message-{{id}}"></div>
 </div>
