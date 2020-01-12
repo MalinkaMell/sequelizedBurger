@@ -50,7 +50,7 @@ Put in your best efforts to complete one of the three available challenge tiers.
 
 ---
 
-[Project demo](https://dry-harbor-65792.herokuapp.com/)
+[Project demo](https://ik-eat-da-burger-sequelize.herokuapp.com/)
 
 ---
 
